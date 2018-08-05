@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="app">
+    <header header-title="abc"></header>
+    <!-- <menu-dir></menu-dir> -->
+    <div id="page-wrapper">
+        <div ui-view=""></div>
+    </div>
+</body>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+<script src="node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+<script src="app.js"></script>
+<script src="route.config.js"></script>
+<script src="app/components/headerComponent.js"></script>
+<script src="app/components/heroListComponent.js"></script>
+<script src="app/components/heroDetailComponent.js"></script>
+<script src="app/components/editableFieldComponent.js"></script>
+
+<script src="app/components/myTabsComponent.js"></script>
+<script src="app/components/myPaneComponent.js"></script>
+</html>
