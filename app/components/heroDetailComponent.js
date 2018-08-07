@@ -1,6 +1,7 @@
 'use strict';
 
-app.component('heroDetail',{
+angular
+    .module('app').component('heroDetail',{
     templateUrl:'app/templates/heroDetailTemplate.html',
     bindings:{
         hero:'<',

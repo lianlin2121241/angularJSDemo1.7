@@ -1,0 +1,19 @@
+<table ng-table="$ctrl.tableParams" class="table table-condensed table-bordered table-striped">
+    <tr ng-repeat="issue in $data">
+        <td data-title="'#'">
+            <a target="_blank" ng-href="{{issue.html_url}}">{{issue.number}}</a>
+        </td>
+        <td data-title="'Theme'">{{issue.title}}</td>
+        <td data-title="'Opened by'">
+            <a target="_blank" ng-href="{{issue.user.url}}">
+                <nobr>
+                    <img width="16" height="16" ng-src="{{issue.user.avatar_url}}" /> {{issue.user.login}}
+                </nobr>
+            </a>
+        </td>
+        <td data-title="'Updated'">
+            <nobr>{{issue.updated_at | date:'medium'}}</nobr>
+        </td>
+    </tr>
+</table>
+<syn-simple-pagination ng-if="$ctrl.paginationParam.totalItems>0" current-page="$ctrl.paginationParam.currentPage" items-per-page="$ctrl.paginationParam.itemsPerPage" total-items="$ctrl.paginationParam.totalItems" load-fun="$ctrl.loadData(currentPage,itemsPerPage)"></syn-simple-pagination>

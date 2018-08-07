@@ -30,6 +30,17 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
                 }]
             }
         })
+        .state('ngtableTest', {
+            url: '/ngtableTest',
+            template: '<ngtable-test></ngtable-test>',
+            resolve: {
+                loadCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        files:['app/components/ngTableTestComponent.js','app/components/synNgTableComponent.js','app/components/synSimplePagination.js']
+                    });
+                }]
+            }
+        })
 
 
         .state('table', {
